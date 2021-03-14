@@ -16,7 +16,7 @@ public class Pedido {
 	
 	
 	public double total() {
-		double output = produto.preco * quantidade;
+		double output = produto.getPreco() * quantidade;
 		return output;
 	}
 

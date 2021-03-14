@@ -21,7 +21,7 @@ public class Caixa {
 	public double totalCarrinho(Carrinho carrinho) {
 		double total = 0;
 		for (Pedido pedido : carrinho.getListaDePedidos()) {
-			double totalPedido = pedido.getTotal();
+			double totalPedido = pedido.total();
 			int codigo = pedido.getProduto().getCodigo();
 			
 			total += totalPedido * (1 - (descontos.get(codigo)/100));
