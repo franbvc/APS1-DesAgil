@@ -7,6 +7,7 @@ public class Caixa {
     
     private Map<Integer, Integer> descontos;
 
+
     public Caixa() {
         super();
         descontos = new HashMap<Integer, Integer>();    
@@ -37,7 +38,5 @@ public class Caixa {
         
         return total;
     }
-    
-    
-    
+
 }
