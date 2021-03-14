@@ -2,7 +2,11 @@ package br.edu.insper.desagil.vaimalte;
 
 public class Testador {
 	public boolean testeA() {
-	    return false;
+		Carrinho carrinho = new Carrinho();
+		Caixa caixa = new Caixa();
+		double totalCarrinho = caixa.totalCarrinho(carrinho);
+		
+	    return totalCarrinho == (double) 0;
 	}
 
 	public boolean testeB() {
