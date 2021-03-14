@@ -26,7 +26,6 @@ public class Testador {
 		Caixa caixa = new Caixa();
 		caixa.adicionarDesconto(produto1, 50);
 		double totalCarrinho = caixa.totalCarrinho(carrinho);
-		System.out.println(totalCarrinho);
 		
 	    return totalCarrinho == 1.75;
 	}
