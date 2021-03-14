@@ -11,15 +11,17 @@ public class Carrinho {
 		this.listaDePedidos = new ArrayList<Pedido>();
 	}
 
-	public void metodo(Produto produto) {
+	public void addProduto(Produto produto) {
+		
 		for (Pedido x: listaDePedidos) {
-			if (x.getProduto() == produto) {
+			if (x.getProduto().getCodigo() == produto.getCodigo()) {
 				x.incrementa();
-			}
-			else {
-				listaDePedidos.add(new Pedido(produto));
+				return;
 			}
 		}
+		
+		listaDePedidos.add(new Pedido(produto));
+		
 	}
 	
 	public List<Pedido> getListaDePedidos() {
