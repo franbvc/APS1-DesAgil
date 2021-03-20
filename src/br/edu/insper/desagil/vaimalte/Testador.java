@@ -1,12 +1,16 @@
 package br.edu.insper.desagil.vaimalte;
 
+import static org.junit.Assert.assertEquals;
+
 public class Testador {
 	public boolean testeA() {
 		Carrinho carrinho = new Carrinho();
 		Caixa caixa = new Caixa();
 		double totalCarrinho = caixa.totalCarrinho(carrinho);
 		
-	    return totalCarrinho == (double) 0;
+	    assertEquals(0.0, totalCarrinho, 0.000001);
+	    
+	    return true;
 	}
 
 	public boolean testeB() {
@@ -16,7 +20,9 @@ public class Testador {
 		Caixa caixa = new Caixa();
 		double totalCarrinho = caixa.totalCarrinho(carrinho);
 		
-	    return totalCarrinho == (double) 3.50;
+		assertEquals(3.50, totalCarrinho, 0.000001);
+		
+	    return true;
 	}
 
 	public boolean testeC() {
@@ -24,10 +30,12 @@ public class Testador {
 		Carrinho carrinho = new Carrinho();
 		carrinho.addProduto(produto1);
 		Caixa caixa = new Caixa();
-		caixa.adicionarDesconto(produto1, 50);
+		caixa.adicionarDesconto(produto1, 20);
 		double totalCarrinho = caixa.totalCarrinho(carrinho);
 		
-	    return totalCarrinho == 1.75;
+		assertEquals(2.80, totalCarrinho, 0.000001);
+		
+	    return true;
 	}
 
 	public boolean testeD() {
@@ -47,7 +55,9 @@ public class Testador {
 		
 		double totalCarrinho = caixa.totalCarrinho(carrinho);
 		
-	    return totalCarrinho == 7.05;
+		assertEquals(7.05, totalCarrinho, 0.000001);
+		
+	    return true;
 	}
 
 	public boolean testeE() {
@@ -67,6 +77,8 @@ public class Testador {
 		
 		double totalCarrinho = caixa.totalCarrinho(carrinho);
 		
-	    return totalCarrinho == 6.9;
+		assertEquals(6.9, totalCarrinho, 0.000001);
+		
+	    return true;
 	}
 }
