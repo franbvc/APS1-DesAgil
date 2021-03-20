@@ -8,9 +8,9 @@ public class Testador {
 		Caixa caixa = new Caixa();
 		double totalCarrinho = caixa.totalCarrinho(carrinho);
 		
-	    assertEquals(0.0, totalCarrinho, 0.000001);
+	    	assertEquals(0.0, totalCarrinho, 0.000001);
 	    
-	    return true;
+	    	return true;
 	}
 
 	public boolean testeB() {
@@ -22,7 +22,7 @@ public class Testador {
 		
 		assertEquals(3.50, totalCarrinho, 0.000001);
 		
-	    return true;
+	    	return true;
 	}
 
 	public boolean testeC() {
@@ -35,7 +35,7 @@ public class Testador {
 		
 		assertEquals(2.80, totalCarrinho, 0.000001);
 		
-	    return true;
+	    	return true;
 	}
 
 	public boolean testeD() {
@@ -57,7 +57,7 @@ public class Testador {
 		
 		assertEquals(7.05, totalCarrinho, 0.000001);
 		
-	    return true;
+	    	return true;
 	}
 
 	public boolean testeE() {
@@ -79,6 +79,6 @@ public class Testador {
 		
 		assertEquals(6.9, totalCarrinho, 0.000001);
 		
-	    return true;
+	    	return true;
 	}
 }
